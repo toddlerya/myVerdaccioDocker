@@ -1,0 +1,19 @@
+version: '3.4'
+
+services:
+  verdaccio:
+    image: verdaccio/verdaccio:5.2
+    container_name: "verdaccio"
+    networks:
+      - verdaccio-network
+    environment:
+      - VERDACCIO_PORT=4873
+    ports:
+      - "4873:4873"
+    volumes:
+      - $PWD/storage:/verdaccio/storage
+      - $PWD/config:/verdaccio/conf
+      - $PWD/plugins:/verdaccio/plugins
+networks:
+  verdaccio-network:
+    driver: bridge
