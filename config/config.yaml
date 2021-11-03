@@ -3,8 +3,9 @@ auth:
   htpasswd:
     file: /verdaccio/conf/passwdFile
 uplinks:
+  taobao_npmjs:
+    url: https://registry.npm.taobao.org/
   npmjs:
-    # url: https://registry.npm.taobao.org/
     url: https://www.npmjs.org
 packages:
   # '@*/*':
@@ -14,6 +15,6 @@ packages:
   '**':
     access: $all
     publish: $authenticated
-    proxy: npmjs
+    proxy: taobao_npmjs npmjs
 logs:
   - {type: stdout, format: pretty, level: http}
