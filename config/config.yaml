@@ -6,7 +6,7 @@ uplinks:
   taobao_npmjs:
     url: https://registry.npm.taobao.org/
   npmjs:
-    url: https://www.npmjs.org
+    url: https://www.npmjs.org/
 packages:
   # '@*/*':
   #   access: $all
