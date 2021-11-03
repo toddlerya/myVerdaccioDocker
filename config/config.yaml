@@ -4,7 +4,8 @@ auth:
     file: /verdaccio/conf/passwdFile
 uplinks:
   npmjs:
-    url: https://registry.npm.taobao.org/
+    # url: https://registry.npm.taobao.org/
+    url: https://www.npmjs.org
 packages:
   # '@*/*':
   #   access: $all

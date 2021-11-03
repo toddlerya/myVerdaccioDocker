@@ -17,3 +17,6 @@ services:
 networks:
   verdaccio-network:
     driver: bridge
+    ipam:
+      config:
+        - subnet: 192.182.1.0/16
