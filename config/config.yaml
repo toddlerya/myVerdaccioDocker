@@ -5,6 +5,8 @@ auth:
 uplinks:
   taobao_npmjs:
     url: https://registry.npm.taobao.org/
+  huawei_npmjs:
+    url: https://mirrors.huaweicloud.com/repository/npm/
   npmjs:
     url: https://www.npmjs.org/
 packages:
@@ -15,6 +17,6 @@ packages:
   '**':
     access: $all
     publish: $authenticated
-    proxy: taobao_npmjs npmjs
+    proxy: taobao_npmjs huawei_npmjs 
 logs:
   - {type: stdout, format: pretty, level: http}
